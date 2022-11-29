@@ -1,0 +1,11 @@
+1  yum -y update
+2  yum -y install  wget https://get.jenkins.io/war-stable/2.361.1/jenkins.war
+3  wget -O /etc/yum.repos.d/jenkins.repo \
+4  rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+5  yum upgrade
+6  amazon-linux-extras install java-openjdk11 -y
+7  yum install jenkins -y
+8  systemctl enable jenkins
+9  systemctl start jenkins
+10 systemctl status jenkins
+
